@@ -34,7 +34,8 @@ export function CartDrawer() {
             }
 
             // 1. Create order on Express backend securely
-            const checkoutReq = await fetch("http://localhost:4000/api/checkout/razorpay", {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+            const checkoutReq = await fetch(`${apiUrl}/api/checkout/razorpay`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ items }),
@@ -59,7 +60,8 @@ export function CartDrawer() {
                 handler: async function (response: any) {
                     try {
                         // 3. Verify Payment Signature
-                        const verifyReq = await fetch("http://localhost:4000/api/verify/razorpay", {
+                        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+                        const verifyReq = await fetch(`${apiUrl}/api/verify/razorpay`, {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({

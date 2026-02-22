@@ -16,7 +16,8 @@ export const useCatalogStore = create<CatalogState>((set) => ({
         try {
             set({ isLoading: true, error: null });
             // Fetch from the new Express backend
-            const response = await fetch("http://localhost:4000/api/products");
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+            const response = await fetch(`${apiUrl}/api/products`);
 
             if (!response.ok) {
                 throw new Error("Failed to fetch products from server");

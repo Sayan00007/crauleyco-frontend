@@ -19,7 +19,8 @@ export default function AdminOrders() {
         const fetchOrders = async () => {
             try {
                 // We mock this slightly for the frontend until the backend route is built
-                const response = await fetch("http://localhost:4000/api/admin/orders", {
+                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+                const response = await fetch(`${apiUrl}/api/admin/orders`, {
                     // Headers would normally include the Bearer token here
                 });
                 if (response.ok) {
