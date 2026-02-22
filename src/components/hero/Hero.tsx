@@ -39,7 +39,7 @@ export function Hero() {
                 {/* Massive Typography with Text Masking */}
                 <h1 className="font-brand-display text-[15vw] leading-[0.8] tracking-tighter uppercase text-white mix-blend-difference mb-12">
                     <div className="overflow-hidden inline-block pb-4">
-                        <span className="block hero-text-line origin-bottom-left">Curate</span>
+                        <span className="block hero-text-line origin-bottom-left">Create</span>
                     </div>
                     <br />
                     <div className="overflow-hidden inline-block">
