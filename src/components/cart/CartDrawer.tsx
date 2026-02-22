@@ -8,15 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLenis } from "@studio-freight/react-lenis";
 
-const loadRazorpayScript = () => {
-    return new Promise((resolve) => {
-        const script = document.createElement("script");
-        script.src = "https://checkout.razorpay.com/v1/checkout.js";
-        script.onload = () => resolve(true);
-        script.onerror = () => resolve(false);
-        document.body.appendChild(script);
-    });
-};
+
 
 export function CartDrawer() {
     const { items, isOpen, closeCart, updateQuantity, removeItem, getCartTotal, clearCart } = useCartStore();
@@ -26,78 +18,12 @@ export function CartDrawer() {
     const handleCheckout = async () => {
         setIsCheckingOut(true);
         try {
-            const res = await loadRazorpayScript();
-            if (!res) {
-                alert("Razorpay SDK failed to load. Are you online?");
-                setIsCheckingOut(false);
-                return;
-            }
+            // Simulate processing payment
+            await new Promise(resolve => setTimeout(resolve, 1500));
 
-            // 1. Create order on Express backend securely
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
-            const checkoutReq = await fetch(`${apiUrl}/api/checkout/razorpay`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ items }),
-            });
-
-            if (!checkoutReq.ok) {
-                const err = await checkoutReq.json();
-                throw new Error(err.error || "Failed to initiate checkout");
-            }
-
-            const { order, totalAmount } = await checkoutReq.json();
-
-            // 2. Open Razorpay Widget
-            const options = {
-                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "", // Pass public key via env
-                amount: order.amount,
-                currency: order.currency,
-                name: "CrauleyCo.",
-                description: "Acquiring Artifacts",
-                order_id: order.id,
-                theme: { color: "#09090b" },
-                handler: async function (response: any) {
-                    try {
-                        // 3. Verify Payment Signature
-                        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
-                        const verifyReq = await fetch(`${apiUrl}/api/verify/razorpay`, {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                total_amount: totalAmount,
-                            }),
-                        });
-
-                        const verifyData = await verifyReq.json();
-
-                        if (verifyData.success) {
-                            alert("Artifact Assembly Complete. Payment verified.");
-                            clearCart();
-                            closeCart();
-                        } else {
-                            alert("Payment verification failed: " + verifyData.error);
-                        }
-                    } catch (error) {
-                        console.error(error);
-                        alert("An error occurred during verification.");
-                    }
-                },
-                prefill: {
-                    name: "Curated Guest",
-                    email: "guest@crauley.co",
-                    contact: "9999999999"
-                }
-            };
-
-            const paymentObject = new (window as any).Razorpay(options);
-            paymentObject.on("payment.failed", function (response: any) {
-                alert("Payment Failed: " + response.error.description);
-            });
-            paymentObject.open();
+            alert("Artifact Assembly Complete. Mock payment verified.");
+            clearCart();
+            closeCart();
 
         } catch (error: any) {
             console.error("Checkout Error:", error);

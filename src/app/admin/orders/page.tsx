@@ -18,15 +18,11 @@ export default function AdminOrders() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                // We mock this slightly for the frontend until the backend route is built
-                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
-                const response = await fetch(`${apiUrl}/api/admin/orders`, {
-                    // Headers would normally include the Bearer token here
-                });
-                if (response.ok) {
-                    const data = await response.json();
-                    setOrders(data);
-                }
+                // Simulate network delay
+                await new Promise(resolve => setTimeout(resolve, 800));
+
+                // Provide empty mock state
+                setOrders([]);
             } catch (error) {
                 console.error("Failed to fetch orders:", error);
             } finally {

@@ -79,12 +79,12 @@ export function Header() {
                     <nav className="hidden md:flex items-center gap-8 lg:gap-12">
                         {[
                             { href: "/posters", label: "Posters" },
-                            { href: "/art-and-craft", label: "Art & Craft" },
+                            { href: "/posters", label: "Art & Craft" },
                             { href: "/bags", label: "Bags" },
                             { href: "/greeting-cards", label: "Cards" },
                         ].map((link) => (
                             <Link
-                                key={link.href}
+                                key={link.label}
                                 href={link.href}
                                 className="text-sm font-medium text-zinc-300 hover:text-white uppercase tracking-wider transition-colors relative group"
                             >

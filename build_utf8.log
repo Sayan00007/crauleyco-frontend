@@ -1,0 +1,46 @@
+﻿
+> crauleyco-test@0.1.0 build
+> next build
+
+node.exe : ΓÜá `eslint` 
+configuration in 
+next.config.ts is no longer 
+supported. See more info 
+here: https://nextjs.org/docs
+/app/api-reference/cli/next#n
+ext-lint-options
+At D:\apps\Node\npm.ps1:29 
+char:3
++   & $NODE_EXE $NPM_CLI_JS 
+$args
++   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (ΓÜá `es  
+  lint` co...xt-lint-optio   
+ ns:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+ΓÜá Invalid next.config.ts 
+options detected: 
+ΓÜá     Unrecognized key(s) 
+in object: 'eslint'
+ΓÜá See more info here: https
+://nextjs.org/docs/messages/i
+nvalid-next-config
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 8.9s
+  Skipping validation of types
+  Collecting page data using 11 workers ...
+
+> Build error occurred
+Error: Page "/[category]" is 
+missing 
+"generateStaticParams()" so 
+it cannot be used with 
+"output: export" config.
+    at ignore-listed frames

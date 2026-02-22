@@ -13,7 +13,7 @@ interface MobileMenuProps {
 
 const navLinks = [
     { href: "/posters", label: "Posters" },
-    { href: "/art-and-craft", label: "Art & Craft" },
+    { href: "/posters", label: "Art & Craft" },
     { href: "/bags", label: "Bags" },
     { href: "/greeting-cards", label: "Greeting Cards" },
 ];
@@ -70,7 +70,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <nav className="flex flex-col items-center space-y-8 text-center mt-12">
                 {navLinks.map((link, idx) => (
                     <Link
-                        key={link.href}
+                        key={link.label}
                         href={link.href}
                         onClick={onClose}
                         ref={(el) => {
