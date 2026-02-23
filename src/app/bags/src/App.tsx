@@ -7,12 +7,15 @@ import { CartProvider } from "@/context/CartContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+import { LoadingScreen } from "@/components/LoadingScreen";
+
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <CartProvider>
+        <LoadingScreen />
         <Toaster />
         <Sonner />
         <BrowserRouter basename="/bags">
