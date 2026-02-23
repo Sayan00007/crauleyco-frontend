@@ -35,7 +35,7 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
+          <a href="/crauleyco-frontend/" className="flex items-center gap-2 group">
             <span className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
               Crauley<span className="text-primary">Co</span>
             </span>
