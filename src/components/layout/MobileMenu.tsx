@@ -15,7 +15,7 @@ const navLinks = [
     { href: "/posters", label: "Posters" },
     { href: "/posters", label: "Art & Craft" },
     { href: "/bags", label: "Bags" },
-    { href: "/greeting-cards", label: "Greeting Cards" },
+    { href: "/posters", label: "Greeting Cards" },
 ];
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {

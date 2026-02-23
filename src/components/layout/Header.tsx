@@ -81,7 +81,7 @@ export function Header() {
                             { href: "/posters", label: "Posters" },
                             { href: "/posters", label: "Art & Craft" },
                             { href: "/bags", label: "Bags" },
-                            { href: "/greeting-cards", label: "Cards" },
+                            { href: "/posters", label: "Cards" },
                         ].map((link) => (
                             <Link
                                 key={link.label}
