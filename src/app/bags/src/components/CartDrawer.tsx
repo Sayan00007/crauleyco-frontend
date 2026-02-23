@@ -48,7 +48,7 @@ export default function CartDrawer() {
                   />
                   <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-foreground text-sm truncate">{product.name}</h4>
-                    <p className="text-primary font-bold mt-1">${product.price}</p>
+                    <p className="text-primary font-bold mt-1">₹{product.price}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <Button
                         variant="outline"
@@ -84,7 +84,7 @@ export default function CartDrawer() {
             <SheetFooter className="border-t border-border pt-4 flex-col gap-4">
               <div className="flex justify-between items-center w-full">
                 <span className="text-lg font-semibold text-foreground">Total</span>
-                <span className="text-2xl font-bold text-primary">${totalPrice.toFixed(2)}</span>
+                <span className="text-2xl font-bold text-primary">₹{totalPrice.toFixed(2)}</span>
               </div>
               <Button className="w-full rounded-lg text-lg py-6" onClick={handleCheckout}>
                 Checkout

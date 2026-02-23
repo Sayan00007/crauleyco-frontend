@@ -144,7 +144,7 @@ export function CartDrawer() {
                                                     </button>
                                                 </div>
                                                 <span className="font-mono text-white">
-                                                    ${((item?.price || 0) * (item?.quantity || 1)).toFixed(2)}
+                                                    ₹{((item?.price || 0) * (item?.quantity || 1)).toFixed(2)}
                                                 </span>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@ export function CartDrawer() {
                                 <div className="flex justify-between items-end mb-6">
                                     <span className="font-sans text-sm text-zinc-400 uppercase tracking-widest">Subtotal</span>
                                     <span className="font-mono text-2xl font-bold text-white">
-                                        ${getCartTotal().toFixed(2)}
+                                        ₹{getCartTotal().toFixed(2)}
                                     </span>
                                 </div>
 

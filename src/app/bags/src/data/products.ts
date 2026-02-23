@@ -24,7 +24,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Urban Voyager Tote',
-    price: 289,
+    price: 23987,
     description: 'Hand-stitched full-grain leather tote with reinforced handles and a spacious interior. Perfect for daily commutes or weekend getaways.',
     category: 'Totes',
     image: bag1,
@@ -33,7 +33,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'Metro Crossbody',
-    price: 199,
+    price: 16517,
     description: 'Sleek crossbody with adjustable strap and hidden zip compartment. Water-resistant exterior for all-weather carry.',
     category: 'Crossbody',
     image: bag2,
@@ -42,7 +42,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Summit Backpack',
-    price: 349,
+    price: 28967,
     description: 'Ergonomic leather backpack with padded laptop sleeve and anti-theft pocket. Built for urban explorers.',
     category: 'Backpacks',
     image: bag3,
@@ -50,7 +50,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Noir Evening Clutch',
-    price: 179,
+    price: 14857,
     description: 'Textured metallic clutch with gold-tone hardware. The ultimate statement piece for formal occasions.',
     category: 'Clutches',
     image: bag4,
@@ -59,7 +59,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Artisan Weekender',
-    price: 429,
+    price: 35607,
     description: 'Oversized duffle-style tote crafted from vegetable-tanned leather. Includes detachable shoulder strap.',
     category: 'Totes',
     image: bag1,
@@ -67,7 +67,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Stealth Sling',
-    price: 159,
+    price: 13197,
     description: 'Minimalist sling bag with RFID-blocking pocket. Ultra-lightweight at just 280g.',
     category: 'Crossbody',
     image: bag2,
@@ -76,7 +76,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Explorer Pro Pack',
-    price: 389,
+    price: 32287,
     description: 'Technical backpack with roll-top closure, water bottle holders, and ventilated back panel.',
     category: 'Backpacks',
     image: bag3,
@@ -84,7 +84,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Luxe Envelope Clutch',
-    price: 219,
+    price: 18177,
     description: 'Slim envelope design in brushed suede with magnetic closure. Chain strap included.',
     category: 'Clutches',
     image: bag4,
@@ -93,7 +93,7 @@ export const products: Product[] = [
   {
     id: '9',
     name: 'Heritage Briefcase',
-    price: 459,
+    price: 38097,
     description: 'Classic briefcase reimagined with modern hardware and a dedicated tablet compartment.',
     category: 'Totes',
     image: bag1,
@@ -102,7 +102,7 @@ export const products: Product[] = [
   {
     id: '10',
     name: 'Drift Messenger',
-    price: 269,
+    price: 22327,
     description: 'Vintage-inspired messenger bag with brass buckle closures and canvas-lined interior.',
     category: 'Crossbody',
     image: bag2,

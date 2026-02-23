@@ -93,7 +93,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                             </h1>
 
                             <p className="font-mono text-xl md:text-2xl text-black mb-8">
-                                ${product?.price?.toFixed(2) || "0.00"}
+                                ₹{product?.price?.toFixed(2) || "0.00"}
                             </p>
 
                             <div className="border-t border-black/10 pt-8 mb-12">

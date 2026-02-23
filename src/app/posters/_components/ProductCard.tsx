@@ -32,7 +32,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
                     {product.name}
                 </h4>
                 <p className="font-grotesk text-sm text-[#09090b]/60 line-clamp-1">{product.description}</p>
-                <p className="font-syne text-xl font-bold text-[#09090b]">${product.price.toFixed(2)}</p>
+                <p className="font-syne text-xl font-bold text-[#09090b]">₹{product.price.toFixed(2)}</p>
             </div>
         </motion.div>
     );

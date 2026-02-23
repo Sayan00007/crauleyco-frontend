@@ -114,7 +114,7 @@ function ScrollCard({ product }: { product: Product }) {
                             {product.category}
                         </span>
                         <span className="font-mono text-sm text-white">
-                            ${product.price.toFixed(2)}
+                            ₹{product.price.toFixed(2)}
                         </span>
                     </div>
 

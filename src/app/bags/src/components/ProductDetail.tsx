@@ -50,7 +50,7 @@ export default function ProductDetail({ product, onClose }: ProductDetailProps) 
               {product.description}
             </p>
             <p className="text-3xl font-bold text-foreground mb-6">
-              ${product.price}
+              ₹{product.price}
             </p>
             <Button
               size="lg"

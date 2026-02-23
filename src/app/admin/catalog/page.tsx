@@ -63,7 +63,7 @@ export default function AdminCatalog() {
                                     </div>
                                 </td>
                                 <td className="p-4 font-mono text-xs text-zinc-500 uppercase tracking-widest">{product.category}</td>
-                                <td className="p-4 font-mono text-sm text-white">${product.price.toFixed(2)}</td>
+                                <td className="p-4 font-mono text-sm text-white">₹{product.price.toFixed(2)}</td>
                                 <td className="p-4">
                                     <span className={`px-2 py-1 rounded text-xs font-mono ${(product.stock || 0) > 0 ? 'bg-emerald-500/10 text-emerald-400' : 'bg-red-500/10 text-red-400'}`}>
                                         {(product.stock || 0) > 0 ? `IN STOCK (${product.stock})` : 'DEPLOYED'}
