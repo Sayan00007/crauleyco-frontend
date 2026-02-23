@@ -18,7 +18,7 @@ const App = () => (
         <LoadingScreen />
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/bags">
+        <BrowserRouter basename="/crauleyco-frontend/bags">
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

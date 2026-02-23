@@ -80,17 +80,28 @@ export function Header() {
                         {[
                             { href: "/posters", label: "Posters" },
                             { href: "/posters", label: "Art & Craft" },
-                            { href: "/bags", label: "Bags" },
+                            { href: "/crauleyco-frontend/bags", label: "Bags", external: true },
                             { href: "/posters", label: "Cards" },
                         ].map((link) => (
-                            <Link
-                                key={link.label}
-                                href={link.href}
-                                className="text-sm font-medium text-zinc-300 hover:text-white uppercase tracking-wider transition-colors relative group"
-                            >
-                                {link.label}
-                                <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full ease-out"></span>
-                            </Link>
+                            link.external ? (
+                                <a
+                                    key={link.label}
+                                    href={link.href}
+                                    className="text-sm font-medium text-zinc-300 hover:text-white uppercase tracking-wider transition-colors relative group"
+                                >
+                                    {link.label}
+                                    <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full ease-out"></span>
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.label}
+                                    href={link.href}
+                                    className="text-sm font-medium text-zinc-300 hover:text-white uppercase tracking-wider transition-colors relative group"
+                                >
+                                    {link.label}
+                                    <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full ease-out"></span>
+                                </Link>
+                            )
                         ))}
                     </nav>
 

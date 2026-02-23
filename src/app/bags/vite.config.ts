@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/bags/",
+  base: "/crauleyco-frontend/bags/",
   build: {
     outDir: "../../../public/bags",
     emptyOutDir: true,

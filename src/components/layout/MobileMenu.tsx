@@ -14,7 +14,7 @@ interface MobileMenuProps {
 const navLinks = [
     { href: "/posters", label: "Posters" },
     { href: "/posters", label: "Art & Craft" },
-    { href: "/bags", label: "Bags" },
+    { href: "/crauleyco-frontend/bags", label: "Bags", external: true },
     { href: "/posters", label: "Greeting Cards" },
 ];
 
@@ -68,19 +68,22 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </button>
 
             <nav className="flex flex-col items-center space-y-8 text-center mt-12">
-                {navLinks.map((link, idx) => (
-                    <Link
-                        key={link.label}
-                        href={link.href}
-                        onClick={onClose}
-                        ref={(el) => {
-                            linksRef.current[idx] = el;
-                        }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-bold font-syne uppercase tracking-tight hover:text-zinc-400 transition-colors"
-                    >
-                        {link.label}
-                    </Link>
-                ))}
+                {navLinks.map((link, idx) => {
+                    const Component = link.external ? 'a' : Link;
+                    return (
+                        <Component
+                            key={link.label}
+                            href={link.href}
+                            onClick={onClose}
+                            ref={(el: HTMLAnchorElement | null) => {
+                                linksRef.current[idx] = el;
+                            }}
+                            className="text-4xl sm:text-6xl md:text-7xl font-bold font-syne uppercase tracking-tight hover:text-zinc-400 transition-colors"
+                        >
+                            {link.label}
+                        </Component>
+                    );
+                })}
             </nav>
 
             <div className="absolute bottom-12 text-sm text-zinc-500 font-medium tracking-widest uppercase">

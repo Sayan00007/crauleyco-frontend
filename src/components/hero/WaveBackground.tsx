@@ -117,7 +117,7 @@ export function WaveBackground() {
                         // Pastel/Muted backgrounds getting darker towards the bottom
                         backgroundColor: `rgba(244, 240, 236, ${0.15 - index * 0.02})`,
                         // The magic CSS masking for topology
-                        WebkitMaskImage: "url(/wave.svg)",
+                        WebkitMaskImage: "url(/crauleyco-frontend/wave.svg)",
                         WebkitMaskSize: `${100 + index * 15}%`,
                         WebkitMaskPosition: "center",
                         WebkitMaskRepeat: "no-repeat",
